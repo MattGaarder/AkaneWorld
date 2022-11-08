@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"
+	<title>"Akane World"
+	<style>
+body {
+background-color: #ffe1f3;
+margin: 0 10%;
+font-family: sans-serif;
+}
+h1 {
+text-align: center;
+font-family: serif;
+font-weight: normal;
+text-transform: uppercase;
+border-bottom: 1px solid #57b1dc;
+margin-top: 30px;
+} 
+h2 {
+color: #d1633c;
+font-size: 1em;
+}
+td, th {
+border: 1px solid gray;
+}
+</style>
+
+</head>
+
+
+
+<body>
+
+<!-- The nav element gives developers a semantic way to identify navigation for a
+site. -->
+
+<nav>
+    <ul>
+        <li><a href="/">Serif</a></li>
+        <li><a href="/">Sans-serif</a></li>
+        <li><a href="/">Script</a></li>
+        <li><a href="/">Display</a></li>
+        <li><a href="/">Dingbats</a></li>
+    </ul>
+</nav>
+
+<time datetime="21:30">9:30p.m.</time>
+
+<!-- To create a destination, use the id attribute to give the target element
+in the document a unique name (that’s “unique” as in the name may
+appear only once in the document. we’re going to use it
+to name an element so that it can serve as a fragment identifier—that is, the
+destination of a link. I use the a element with the href attribute to provide the location of
+the link. To indicate that I’m linking to a fragment, I use the octothorpe symbol -->
+<a href="#startH">H</a>
+
+<h1><img src="Assets/AkaneSmile.png" alt="logo"><br>Lovely Akane so cute</h1>
+
+<h2>The Restaurant</h2>
+<p>The Black Goose Bistro offers casual lunch and dinner fare in a relaxed
+atmosphere. The menu changes regularly to highlight the freshest local
+ingredients.</p>
+<h2>Catering</h2>
+</p>You have fun. <em>We'll handle the cooking.</em> Black Goose Catering can handle
+events from snacks for a meetup to elegant corporate fundraisers. </p>
+<h2>Location and Hours</h2>
+<p>Seekonk, Massachusetts;<br>
+Monday through Thursday11am to 9pm;<br>
+Friday and Saturday, 11am to
+midnight </p>
+
+<figure>
+    
+    <img src="/Assets/ThriftyA.jpg" alt="Thrifty Sweetey"
+        sizes=(max-width: 800px) 100vw,
+        (max-width: 800px),
+        240px>
+<picture>
+    <source media="(min-width: 500px)" srcset="/Assets/ThriftyA.jpg">
+    <source media="(min-width: 300px)" srcset="/Assets/ThriftyA.jpg">
+    <img src="/Assets/ThriftyA.jpg" alt="hand holding ice cream cone and
+            text that reads Savor the Summer">
+    </picture>
+</figure>
+
+<!-- This example tells the browser that if the viewport is 1024 pixels wide or
+larger, use the large version of the ice cream cone image. If it is wider than
+760 pixels (but smaller than 1024, such as on a tablet), use the medium version.
+Finally, for viewports that are smaller than 760 pixels and therefore
+don’t match any of the media queries in the previous source elements, the
+small version should be used (FIGURE 7-14). The small version, as specified
+in the img element, will be used for browsers that do not recognize picture
+and source. -->
+
+<!-- The figure element identifies content that illustrates or supports some point
+in the text. A figure may contain an image, a video, a code snippet, text, or
+even a table—pretty much anything that can go in the flow of web content.
+Content in a figure element should be treated and referenced as a selfcontained
+unit. -->
+<section>
+<dl>
+    <dt>Linotype</dt>
+    <dd>Line-casting allowed type to be selected, used, then recirculated
+    into the machine automatically. This advance increased the speed of
+    typesetting and printing dramatically.</dd>
+</section>
+<!--  -->
+
+</body>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Jen's Kitchen</title>
+<style>
+body {
+	margin: 2em 5%;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+h1, h2 {	
+	color: #399;}
+h1 {
+	font-size: 1.5em;
+}
+h2 {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 1em;
+}
+small {
+	color: #999;
+}
+</style>
+
+</head>
+
+<body>
+<img src=".gif" alt="Jen's Kitchen banner" width="660" height="94">
+
+<h1>Welcome to Jen&rsquo;s Kitchen</h1>
+
+<p>People who know me know that I love to cook. I've created this site to share some of my favorite recipes and online food resources. <i>Bon Appetit!</i> </p>
+
+<p><a href="Pages/kawaii.html">so kawaii</a></p>
+
+<!-- It indicates that they belong together in a conceptual unit or should be
+treated as a unit by CSS or JavaScript. By marking related content as a div and
+giving it a unique id or indicating that it is part of a class, you give context
+to the elements in the grouping. -->
+
+<div class="goodthings">
+<h2>From Jen&rsquo;s Cookbook</h2>
+<img src="images/felici-cover.gif" alt="">
+<ul>
+  <li>Tapenade (Olive Spread)</li>
+  <li>Garlic Salmon</li>
+  <li>Linguine with Clam Sauce</li>
+  <li>Couscous with Peas and Mint</li>
+</ul>
+</div>
+
+<!-- The id attribute is used to assign a unique identifier to an element in the
+document. In other words, the value of id must be used only once in the
+document. This makes it useful for assigning a name to a particular element,
+as though it were a piece of data. -->
+
+<div id="ISBN0321127307">
+    <img src="felici-cover.gif" alt="">
+    <p><cite>The Complete Manual of Typography</cite>, James Felici</p>
+    <p class="description"> A combination of type history and examples of good and bad type.
+    </p>
+</div>
+
+<div id="ISBN0321127307">
+    <img src="felici-cover.gif" alt="">
+    <p><cite>The Complete Manual of Typography</cite>, James Felici</p>
+    <p class="description"> A combination of type history and examples of good and bad type.
+    </p>
+</div>
+
+<!-- Notice how the same element may have both a class and an id. It is also
+possible for elements to belong to multiple classes. When there is a list of
+class values, simply separate them with character spaces. -->
+
+<h2>Good Food on the Web</h2>
+<ul>
+  <li>The Food Network</li>
+  <li>Epicurious </li>
+</ul>
+
+
+<h2 id="startH">Good Food on the Web</h2>
+<ul>
+  <li>The Food Network</li>
+  <li>Epicurious </li>
+</ul>
+
+<!-- A span offers the same benefits as the div element, except it is used for phrase
+elements and does not introduce line breaks. Because spans are inline elements,
+they may contain only text and other inline elements (in other words,
+you cannot put headings, lists, content-grouping elements, and so on, in a
+span). Let’s get right to some examples.
+There is no telephone element, but we can use a span to give meaning to
+telephone numbers. In this example, each telephone number is marked up as
+a span and classified as “tel”: -->
+
+<h2>Good Food on the Web</h2>
+<ul>
+  <li><span class="tel">The Food Network</span></li>
+  <li><span class="tel">Epicurious<span></li>
+</ul>
+
+<!-- shows the elements that identify the table (table), rows (tr, for
+“table row”), and cells (th, for “table headers,” and td, for “table data”). Start and end table tags identify the beginning and end of the tabular material.
+The table element may directly contain only some number of tr (row)
+elements, a caption and, optionally, the row and column group elements
+listed in the “Row and Column Groups” section. The only thing that can go
+in the tr element is some number of td or th elements.-->
+
+<table>
+    <tr>
+    <th>Menu item</th>
+    <th>Calories</th>
+    <th>Fat (g)</th>
+    </tr>
+    <tr>
+    <td>Chicken noodle soup</td>
+    <td>120</td>
+    <td>2</td>
+    </tr>
+    <tr>
+    <td>Caesar salad</td>
+    <td>400</td>
+    <td>26</td>
+    </tr>
+</table>
+
+
+
+<!-- More complicated table -->
+
+<table class="data" id="bidi-control-codes-injection-table">
+    <caption>Bidi control codes injected by <a class="property" data-link-type="propdesc" href="#propdef-unicode-bidi" id="ref-for-propdef-unicode-bidi①②">unicode-bidi</a> at the start/end of <a class="css" data-link-type="propdesc" href="https://www.w3.org/TR/CSS21/visuren.html#propdef-display" id="ref-for-propdef-display">display: inline</a> boxes</caption>
+    <colgroup span="1">
+    <colgroup span="2">
+    <colgroup span="2">
+    <thead>
+     <tr>
+      <th rowspan="3" scope="col"><a class="property" data-link-type="propdesc" href="#propdef-unicode-bidi" id="ref-for-propdef-unicode-bidi①③">unicode-bidi</a> value
+      <th colspan="4"><a class="property" data-link-type="propdesc" href="#propdef-direction" id="ref-for-propdef-direction①④">direction</a> value
+     <tr>
+      <th colspan="2"><a class="css" data-link-type="maybe" href="#valdef-direction-ltr" id="ref-for-valdef-direction-ltr">ltr</a>
+      <th colspan="2"><a class="css" data-link-type="maybe" href="#valdef-direction-rtl" id="ref-for-valdef-direction-rtl">rtl</a>
+     <tr>
+      <th>start
+      <th>end
+      <th>start
+      <th>end
+    <tbody>
+     <tr>
+      <th scope="row"><a class="css" data-link-type="maybe" href="#valdef-unicode-bidi-normal" id="ref-for-valdef-unicode-bidi-normal④">normal</a>
+      <td>—
+      <td>—
+      <td>—
+      <td>—
+     <tr>
+      <th scope="row"><a class="css" data-link-type="maybe" href="#valdef-unicode-bidi-embed" id="ref-for-valdef-unicode-bidi-embed①">embed</a>
+      <td>LRE (U+202A)
+      <td>PDF (U+202C)
+      <td>RLE (U+202B)
+      <td>PDF (U+202C)
+     <tr>
+      <th scope="row"><a class="css" data-link-type="maybe" href="#valdef-unicode-bidi-isolate" id="ref-for-valdef-unicode-bidi-isolate④">isolate</a>
+      <td>LRI (U+2066)
+      <td>PDI (U+2069)
+      <td>RLI (U+2067)
+      <td>PDI (U+2069)
+     <tr>
+      <th scope="row"><a class="css" data-link-type="maybe" href="#valdef-unicode-bidi-bidi-override" id="ref-for-valdef-unicode-bidi-bidi-override③">bidi-override</a>*
+      <td>LRO (U+202D)
+      <td>PDF (U+202C)
+      <td>RLO (U+202E)
+      <td>PDF (U+202C)
+     <tr>
+      <th scope="row"><a class="css" data-link-type="maybe" href="#valdef-unicode-bidi-isolate-override" id="ref-for-valdef-unicode-bidi-isolate-override①">isolate-override</a>*
+      <td>FSI,LRO (U+2068,U+202D)
+      <td>PDF,PDI (U+202C,U+2069)
+      <td>FSI,RLO (U+2068,U+202E)
+      <td>PDF,PDI (U+202C,U+2069)
+     <tr>
+      <th scope="row"><a class="css" data-link-type="maybe" href="#valdef-unicode-bidi-plaintext" id="ref-for-valdef-unicode-bidi-plaintext①">plaintext</a>
+      <td>FSI (U+2068)
+      <td>PDI (U+2069)
+      <td>FSI (U+2068)
+      <td>PDI (U+2069)
+    <tfoot>
+     <tr>
+      <td colspan="5"> <small>* The LRO/RLO+PDF pairs are also applied
+          to the <a data-link-type="dfn" href="https://www.w3.org/TR/css-inline-3/#root-inline-box" id="ref-for-root-inline-box">root inline box</a> of a <a data-link-type="dfn" href="https://www.w3.org/TR/css-display-3/#block-container" id="ref-for-block-container">block container</a> if these values of <a class="property" data-link-type="propdesc" href="#propdef-unicode-bidi" id="ref-for-propdef-unicode-bidi①④">unicode-bidi</a> were specified on the <span id="ref-for-block-container①">block container</span>. </small>
+   </table>
+
+<p><small>Copyright 2018, Jennifer Robbins</small></p>
+
+</body>
+</html>
