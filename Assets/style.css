@@ -7,6 +7,128 @@ them in /* and (see below) check the design
 in a browser, then remove the
 comment characters to make the
 style appear again. */
+
+/* These are the order of properties when describing in the font declaration.
+
+Once you’ve met the size and family requirements, the other values are
+optional and may appear in any order prior to the font-size. When style,
+weight, stretch, or variant is omitted, its value is set to normal.
+{ font: style weight stretch variant size/line-height font-family; } 
+
+line-height adjusts the height of the text line and is used to add space between
+lines of text. It appears just after font-size, separated by a slash.
+h3 { font: oblique bold small-caps 1.5em/1.8em Verdana, sans-serif; }
+h2 { font: bold 1.75em/2 sans-serif; }
+
+h1 {
+font: bold 1.5em "Marko One",
+Georgia, serif;
+}
+
+The id attribute can be used with any element, and it is commonly used to give meaning to
+the generic div and span elements. ID selectors allow you to target elements
+by their id values. 
+Here is an example of a list item with an id reference:
+
+<li id="sleestak">Sleestak T-shirt</li>
+
+Now you can write a style rule just for that list item using an ID selector, like
+so (notice the # preceding the id reference):
+
+li#sleestak { color: olive; }
+
+Because id values must be unique in the document, it is acceptable to omit
+the element name. The following rule is equivalent to the last one:
+
+#sleestak { color: olive; }
+
+You can also use an ID selector as part of a contextual selector. In this
+example, a style is applied only to a elements that appear within the element
+identified as “resources.” In this way, you can treat links in the element named
+“resources” differently than all the other links on the page without any additional
+markup.
+
+#resources a { text-decoration: none; }
+
+Child selector
+A child selector is similar to a descendant selector, but it targets only the direct
+children of a given element. There may be no other hierarchical levels in between.
+They are indicated with the greater-than symbol (>). The following rule affects
+emphasized text, but only when it is directly contained in a p element. An em element
+inside a link (a) within the paragraph would not be affected.
+
+p > em {font-weight: bold;}
+
+You can target elements belonging to the same class with—you guessed it—a
+class selector. Class names are indicated with a period (.) at the beginning
+of the selector. For example, to select all paragraphs with class="special",
+use this selector (the period indicates the following word is a class selector):
+
+p.special { color: orange; }
+
+.special { color: orange; }
+. to mark that special is the class name, the declaration effects all elements with this class
+
+This list of selector types from most to least specific should serve you well
+in most scenarios:
+• Inline styles with the style attribute are more specific than (and will
+override…)
+• ID selectors, which are more specific than (and will override…)
+• Class selectors, which are more specific than (and will override…)
+• Individual element selectors
+
+The universal element selector (*) matches any element , like a
+wildcard in programming languages. The style rule
+
+* { border: 1px solid gray; }
+
+puts a 1-pixel gray border around every element in the
+document. It is also useful as a contextual selector, as shown in
+this example that selects all elements in an “intro” section:
+
+#intro * { color: gray; }
+
+*/
+
+
+body {
+	margin: 2em 5%; 
+    font-family: 'Roboto', sans-serif;
+    }
+    
+h1 {
+    font-size: 1.5em;
+    }
+h2 {
+    font-size: 1em;
+    font-family: 'Roboto', sans-serif;
+    }
+dt { font-weight: bold; }
+
+p { border: 1px solid blue; }
+
+h1, h2 {	
+	color: rgb(180, 115, 206);}
+h1 {
+	font-size: 1.5em;
+}
+h2 {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 1em;
+}
+small {
+	color: #999;
+}
+.goodthings { color: rgb(43, 230, 230); }
+
+/* How to succesfully link font to site */
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('AkaneWorld/Assets/Roboto/Roboto-Regular.ttf');
+
+
+/*
 h1 { border: 1px solid blue; }
 h2 { border: 1px solid blue; }
 
