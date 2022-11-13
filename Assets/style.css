@@ -94,24 +94,34 @@ this example that selects all elements in an “intro” section:
 body {
 	margin: 2em 5%; 
     font-family: 'Roboto', sans-serif;
+    background-color: #fae8f7;
+    color: rgb(235, 106, 235);
     }
+body {
+    margin-top: 0;
+    padding: 3em 1em 2em 1em;
+    background-color: rgba(255,255,255,.5);
+    background-image: url(ezgif.com-gif-maker.gif);
+    background-repeat: repeat-x;
+        }
     
 h1 {
     font-size: 1.5em;
+    text-align: center;
     }
 h2 {
     font-size: 1em;
     font-family: 'Roboto', sans-serif;
+    text-align: center;
     }
 dt { font-weight: bold; }
 
 p { border: 1px solid blue; }
+p::first-letter { font-size: 300%; color: orange; }
 
 h1, h2 {	
 	color: rgb(180, 115, 206);}
-h1 {
-	font-size: 1.5em;
-}
+
 h2 {
 	font-family: Verdana, Geneva, sans-serif;
 	font-size: 1em;
@@ -119,14 +129,90 @@ h2 {
 small {
 	color: #999;
 }
-.goodthings { color: rgb(43, 230, 230); }
+.goodthings { color: rgb(43, 230, 230); text-align: center;}
 
+a:link {
+    color: maroon;
+    }
+    a:visited {
+    color: gray;
+    }
+a:hover {
+    color: rgb(113, 8, 76);
+    background-color: #896565;
+        }
 /* How to succesfully link font to site */
 
 @font-face {
     font-family: 'Roboto';
     src: url('AkaneWorld/Assets/Roboto/Roboto-Regular.ttf');
 
+
+/*
+This is the required order for pseudo-classes
+
+a { text-decoration: none; } / turns underlines off for all links /
+a:link { color: maroon; }
+a:visited { color: gray; }
+a:focus { color: maroon; background-color: #ffd9d9; }
+a:hover { color: maroon; background-color: #ffd9d9; }
+a:active { color: red; background-color: #ffd9d9; }
+
+The following code is an example of a pseudo-element. Double or single colon can be used.
+
+p.warning::before {
+content: url(exclamation.png);
+margin-right: 6px;
+}
+p.warning::after {
+content: " Thank you.";
+color: red;
+}
+
+Note the space before Thank you. Spaces must be included within the quotation marks if desired.
+*/
+
+/* These examples show three different ways to make the line height twice the
+height of the font size: */
+
+    p { line-height: 2; }
+    p { line-height: 2em; }
+    p { line-height: 200%; }
+
+
+
+/* white-space (CSS2) Specifies how whitespace
+in the element source is handled in layout. For
+example, the pre value preserves the character
+spaces and returns found in the source, similar
+to the pre HTML element. 
+
+List Item Display Role
+You may have noticed that the list
+style properties apply to “elements
+whose display value is list-item.”
+The CSS2.1 specification allows any
+element to perform like a list item by
+setting its display property to listitem.
+This property can be applied
+to any HTML element or elements in
+other XML languages. For example,
+you could automatically bullet or
+number a series of paragraphs by
+setting the display property of
+paragraph (p) elements to listitem,
+as shown in this example:
+
+p.lettered {
+display: list-item;
+list-style-type: upper-alpha;
+}
+
+ul {
+list-style-type: disc;
+list-style-image: url(/images/rainbow.gif);
+list-style-position: outside;
+}*/
 
 /*
 h1 { border: 1px solid blue; }
